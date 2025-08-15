@@ -52,28 +52,12 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
-          {/* Left side - Floating Dumbledore quote words */}
-          <motion.div 
-            className="space-y-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-serif font-bold text-white leading-tight">
-                Creative
-                <span className="text-cyan-400"> Developer</span>
-              </h1>
-              <p className="text-xl text-gray-300 font-light leading-relaxed">
-                Bringing ideas to life through code, design, and imagination. 
-                Welcome to my digital canvas.
-              </p>
-            </div>
+        {/* Main content area with quote words and boy side by side */}
+        <div className="flex justify-center items-center min-h-[600px] mb-16">
+          <div className="relative w-full max-w-6xl">
             
-            {/* Floating quote words - arranged more freely */}
-            <div className="relative w-full h-96">
+            {/* Floating quote words - left side */}
+            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/2">
               {/* Flowy geometric shapes */}
               <motion.div
                 className="absolute top-10 left-10 w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"
@@ -104,6 +88,21 @@ export default function HeroSection() {
                 }}
               />
               
+              <motion.div
+                className="absolute bottom-20 left-16 w-20 h-6 bg-gradient-to-r from-green-400/10 to-teal-500/10 rounded-full blur-sm"
+                animate={{
+                  x: [0, 30, 0],
+                  y: [0, -10, 0],
+                  scaleX: [1, 1.5, 1],
+                }}
+                transition={{
+                  duration: 10,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 4
+                }}
+              />
+              
               {/* Dumbledore quote words floating */}
               <motion.div 
                 className="absolute top-12 left-20 text-lg text-gray-300 font-light"
@@ -114,7 +113,7 @@ export default function HeroSection() {
                 Of course
               </motion.div>
               <motion.div 
-                className="absolute top-24 left-8 text-lg text-gray-300 font-light"
+                className="absolute top-32 left-8 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 }}
@@ -122,7 +121,7 @@ export default function HeroSection() {
                 it is all
               </motion.div>
               <motion.div 
-                className="absolute top-32 left-32 text-lg text-gray-300 font-light"
+                className="absolute top-52 left-32 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9 }}
@@ -130,7 +129,7 @@ export default function HeroSection() {
                 happening
               </motion.div>
               <motion.div 
-                className="absolute top-20 left-60 text-lg text-gray-300 font-light"
+                className="absolute top-72 left-12 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.1 }}
@@ -138,7 +137,7 @@ export default function HeroSection() {
                 inside
               </motion.div>
               <motion.div 
-                className="absolute top-48 left-12 text-lg text-gray-300 font-light"
+                className="absolute top-92 left-28 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.3 }}
@@ -146,7 +145,7 @@ export default function HeroSection() {
                 your head,
               </motion.div>
               <motion.div 
-                className="absolute top-56 left-44 text-lg text-gray-300 font-light"
+                className="absolute top-112 left-44 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.5 }}
@@ -154,7 +153,7 @@ export default function HeroSection() {
                 Harry.
               </motion.div>
               <motion.div 
-                className="absolute top-64 left-16 text-lg text-gray-300 font-light"
+                className="absolute top-132 left-16 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.7 }}
@@ -162,7 +161,7 @@ export default function HeroSection() {
                 But why
               </motion.div>
               <motion.div 
-                className="absolute top-72 left-36 text-lg text-gray-300 font-light"
+                className="absolute top-152 left-36 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.9 }}
@@ -170,7 +169,7 @@ export default function HeroSection() {
                 on earth
               </motion.div>
               <motion.div 
-                className="absolute top-80 left-8 text-lg text-gray-300 font-light"
+                className="absolute top-172 left-8 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.1 }}
@@ -178,7 +177,7 @@ export default function HeroSection() {
                 should
               </motion.div>
               <motion.div 
-                className="absolute top-88 left-28 text-lg text-gray-300 font-light"
+                className="absolute top-192 left-28 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.3 }}
@@ -186,7 +185,7 @@ export default function HeroSection() {
                 that mean
               </motion.div>
               <motion.div 
-                className="absolute top-96 left-52 text-lg text-gray-300 font-light"
+                className="absolute top-212 left-52 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.5 }}
@@ -194,7 +193,7 @@ export default function HeroSection() {
                 it is not
               </motion.div>
               <motion.div 
-                className="absolute top-104 left-16 text-lg text-gray-300 font-light"
+                className="absolute top-232 left-16 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.7 }}
@@ -202,15 +201,46 @@ export default function HeroSection() {
                 real?
               </motion.div>
             </div>
-          </motion.div>
 
-          {/* Right side - Boy silhouette looking at the words */}
-          <div className="relative">
-            <div className="relative w-96 h-96 mx-auto">
-              <SilhouetteSVG className="w-full h-full opacity-90" />
+            {/* Boy silhouette - right side */}
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/2">
+              <div className="relative w-96 h-96 mx-auto">
+                <SilhouetteSVG className="w-full h-full opacity-90" />
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Title and description below */}
+        <motion.div 
+          className="text-center space-y-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <div className="space-y-4">
+            <h1 className="text-5xl lg:text-7xl font-serif font-bold text-white leading-tight">
+              Creative
+              <span className="text-cyan-400"> Developer</span>
+            </h1>
+            <p className="text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
+              Bringing ideas to life through code, design, and imagination. 
+              Welcome to my digital canvas.
+            </p>
+          </div>
+          
+          <motion.div 
+            className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-gray-600/30 max-w-2xl mx-auto"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <blockquote className="text-lg italic text-gray-200 font-serif">
+              "The half is a mere moment of inability but you are able for you are not half a being. 
+              You are a whole that exists to live a life not half a life."
+            </blockquote>
+            <cite className="block text-right text-gray-400 mt-3">— Gibran Khalil Gibran</cite>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
