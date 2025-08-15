@@ -57,31 +57,63 @@ export default function HeroSection() {
           {/* Left side - Silhouette and swirl text */}
           <div className="relative">
             <div className="relative w-96 h-96 mx-auto">
-              <SilhouetteSVG className="w-full h-full opacity-80" />
+              <SilhouetteSVG className="w-full h-full opacity-90" />
               
-              {/* Swirl text around the silhouette */}
-              <motion.div 
-                className="absolute inset-0"
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 30,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              >
-                <div className="absolute top-12 left-1/2 transform -translate-x-1/2 text-sm text-slate-600 font-light whitespace-nowrap">
-                  Of course this is all inside of your head, Harry.
+              {/* Stationary swirl text around the silhouette */}
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Top arc of text - starting from left going right */}
+                <div className="absolute top-8 left-16 text-xs text-slate-600 font-light transform -rotate-12 origin-left">
+                  Of course
                 </div>
-                <div className="absolute top-32 right-4 transform rotate-45 text-sm text-slate-600 font-light whitespace-nowrap origin-left">
-                  But why on Earth should
+                <div className="absolute top-4 left-28 text-xs text-slate-600 font-light transform -rotate-6 origin-left">
+                  this is all
                 </div>
-                <div className="absolute bottom-32 right-4 transform rotate-90 text-sm text-slate-600 font-light whitespace-nowrap origin-left">
-                  that mean it is not real?
+                <div className="absolute top-6 left-44 text-xs text-slate-600 font-light transform rotate-0 origin-left">
+                  inside
                 </div>
-                <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 rotate-180 text-sm text-slate-600 font-light whitespace-nowrap">
-                  — Albus Dumbledore
+                <div className="absolute top-12 left-60 text-xs text-slate-600 font-light transform rotate-6 origin-left">
+                  of your
                 </div>
-              </motion.div>
+                
+                {/* Right side text - moving down */}
+                <div className="absolute top-20 right-12 text-xs text-slate-600 font-light transform rotate-15 origin-center">
+                  head,
+                </div>
+                <div className="absolute top-32 right-8 text-xs text-slate-600 font-light transform rotate-25 origin-center">
+                  Harry.
+                </div>
+                <div className="absolute top-48 right-6 text-xs text-slate-600 font-light transform rotate-35 origin-center">
+                  But
+                </div>
+                <div className="absolute top-64 right-10 text-xs text-slate-600 font-light transform rotate-45 origin-center">
+                  why
+                </div>
+                
+                {/* Bottom arc text - moving from right to left */}
+                <div className="absolute bottom-20 right-16 text-xs text-slate-600 font-light transform rotate-55 origin-center">
+                  on Earth
+                </div>
+                <div className="absolute bottom-16 right-32 text-xs text-slate-600 font-light transform rotate-65 origin-center">
+                  should
+                </div>
+                <div className="absolute bottom-14 left-52 text-xs text-slate-600 font-light transform rotate-75 origin-center">
+                  that
+                </div>
+                <div className="absolute bottom-16 left-36 text-xs text-slate-600 font-light transform rotate-85 origin-center">
+                  mean
+                </div>
+                
+                {/* Left side completion - moving up */}
+                <div className="absolute bottom-24 left-20 text-xs text-slate-600 font-light transform rotate-95 origin-center">
+                  it is
+                </div>
+                <div className="absolute bottom-32 left-12 text-xs text-slate-600 font-light transform rotate-105 origin-center">
+                  not
+                </div>
+                <div className="absolute bottom-44 left-8 text-xs text-slate-600 font-light transform rotate-115 origin-center">
+                  real?
+                </div>
+              </div>
             </div>
           </div>
 
