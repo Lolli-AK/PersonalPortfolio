@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(36, 100%, 98%);
+  --foreground: hsl(215, 25%, 7.8%);
+  --card: hsl(36, 100%, 97%);
+  --card-foreground: hsl(215, 25%, 7.8%);
+  --popover: hsl(36, 100%, 98%);
+  --popover-foreground: hsl(215, 25%, 7.8%);
+  --primary: hsl(188, 100%, 43%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(215, 25%, 7.8%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(210, 40%, 94%);
+  --muted-foreground: hsl(215, 25%, 7.8%);
+  --accent: hsl(188, 50%, 85%);
+  --accent-foreground: hsl(188, 100%, 43%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --ring: hsl(188, 100%, 43%);
+  --chart-1: hsl(188, 100%, 43%);
+  --chart-2: hsl(160, 60%, 45%);
+  --chart-3: hsl(30, 80%, 55%);
+  --chart-4: hsl(280, 65%, 60%);
+  --chart-5: hsl(340, 75%, 55%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(215, 28%, 7%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(215, 28%, 7%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(215, 28%, 7%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(188, 100%, 43%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(215, 28%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(215, 28%, 17%);
+  --muted-foreground: hsl(217, 10%, 64%);
+  --accent: hsl(215, 28%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 50%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(215, 28%, 17%);
+  --input: hsl(215, 28%, 17%);
+  --ring: hsl(188, 100%, 43%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Water overlay animation */
+.water-overlay {
+  background: linear-gradient(180deg, 
+    rgba(6, 182, 212, 0) 0%, 
+    rgba(6, 182, 212, 0.1) 30%, 
+    rgba(6, 182, 212, 0.3) 60%, 
+    rgba(6, 182, 212, 0.6) 100%);
+}
+
+/* Custom animations */
+@keyframes water-flow {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px); 
+  }
+  25% { 
+    transform: translateY(-20px) translateX(10px); 
+  }
+  50% { 
+    transform: translateY(-10px) translateX(-15px); 
+  }
+  75% { 
+    transform: translateY(-30px) translateX(5px); 
+  }
+}
+
+@keyframes bubble-float {
+  0%, 100% { 
+    transform: translateY(0px) scale(1); 
+    opacity: 0.7; 
+  }
+  50% { 
+    transform: translateY(-50px) scale(1.1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes gentle-sway {
+  0%, 100% { 
+    transform: translateX(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateX(15px) rotate(1deg); 
+  }
+}
+
+@keyframes text-swirl {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+
+/* Animation classes */
+.animate-water-flow {
+  animation: water-flow 20s ease-in-out infinite;
+}
+
+.animate-bubble-float {
+  animation: bubble-float 15s ease-in-out infinite;
+}
+
+.animate-gentle-sway {
+  animation: gentle-sway 8s ease-in-out infinite;
+}
+
+.animate-text-swirl {
+  animation: text-swirl 30s linear infinite;
+}
+
+/* Scroll trigger effects */
+.scroll-trigger {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(215, 28%, 17%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(188, 100%, 43%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(188, 100%, 35%);
+}
