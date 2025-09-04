@@ -60,7 +60,7 @@ export default function HeroSection() {
             <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/2">
               {/* Flowy geometric shapes */}
               <motion.div
-                className="absolute top-10 left-10 w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"
+                className="absolute top-0 left-10 w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"
                 animate={{
                   x: [0, 20, 0],
                   y: [0, -15, 0],
@@ -74,7 +74,7 @@ export default function HeroSection() {
               />
               
               <motion.div
-                className="absolute top-20 right-20 w-12 h-12 bg-gradient-to-br from-purple-400/15 to-pink-500/15 rounded-lg rotate-45 blur-sm"
+                className="absolute top-10 right-20 w-12 h-12 bg-gradient-to-br from-purple-400/15 to-pink-500/15 rounded-lg rotate-45 blur-sm"
                 animate={{
                   x: [0, -25, 0],
                   y: [0, 20, 0],
@@ -89,7 +89,7 @@ export default function HeroSection() {
               />
               
               <motion.div
-                className="absolute bottom-20 left-16 w-20 h-6 bg-gradient-to-r from-green-400/10 to-teal-500/10 rounded-full blur-sm"
+                className="absolute bottom-15 left-16 w-20 h-6 bg-gradient-to-r from-green-400/10 to-teal-500/10 rounded-full blur-sm"
                 animate={{
                   x: [0, 30, 0],
                   y: [0, -10, 0],
@@ -105,7 +105,7 @@ export default function HeroSection() {
               
               {/* Dumbledore quote words floating */}
               <motion.div 
-                className="absolute top-12 left-20 text-lg text-gray-300 font-light"
+                className="absolute top-[0rem] left-20 text-lg text-gray-300 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -113,97 +113,97 @@ export default function HeroSection() {
                 Of course
               </motion.div>
               <motion.div 
-                className="absolute top-32 left-8 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-              >
-                it is all
-              </motion.div>
-              <motion.div 
-                className="absolute top-52 left-32 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 }}
-              >
-                happening
-              </motion.div>
-              <motion.div 
-                className="absolute top-72 left-12 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.1 }}
-              >
-                inside
-              </motion.div>
-              <motion.div 
-                className="absolute top-92 left-28 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.3 }}
-              >
-                your head,
-              </motion.div>
-              <motion.div 
-                className="absolute top-112 left-44 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.5 }}
-              >
-                Harry.
-              </motion.div>
-              <motion.div 
-                className="absolute top-132 left-16 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.7 }}
-              >
-                But why
-              </motion.div>
-              <motion.div 
-                className="absolute top-152 left-36 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.9 }}
-              >
-                on earth
-              </motion.div>
-              <motion.div 
-                className="absolute top-172 left-8 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.1 }}
-              >
-                should
-              </motion.div>
-              <motion.div 
-                className="absolute top-192 left-28 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.3 }}
-              >
-                that mean
-              </motion.div>
-              <motion.div 
-                className="absolute top-212 left-52 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.5 }}
-              >
-                it is not
-              </motion.div>
-              <motion.div 
-                className="absolute top-232 left-16 text-lg text-gray-300 font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.7 }}
-              >
-                real?
-              </motion.div>
+              className="absolute top-[2rem] left-8 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+            >
+              it is all
+            </motion.div>
+            <motion.div 
+              className="absolute top-[2rem] left-32 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+            >
+              happening
+            </motion.div>
+            <motion.div 
+              className="absolute top-[3.5rem] left-12 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.1 }}
+            >
+              inside
+            </motion.div>
+            <motion.div 
+              className="absolute top-[3.5rem] left-28 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3 }}
+            >
+              your head,
+            </motion.div>
+            <motion.div 
+              className="absolute top-[5rem] left-25 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5 }}
+            >
+              Harry.
+            </motion.div>
+            <motion.div 
+              className="absolute top-[7rem] left-16 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.7 }}
+            >
+              But why
+            </motion.div>
+            <motion.div 
+              className="absolute top-[7rem] left-36 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.9 }}
+            >
+              on earth
+            </motion.div>
+            <motion.div 
+              className="absolute top-[8.5rem] left-25 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2.1 }}
+            >
+              should
+            </motion.div>
+            <motion.div 
+              className="absolute top-[8.5rem] left-28 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2.3 }}
+            >
+              that mean
+            </motion.div>
+            <motion.div 
+              className="absolute top-[10rem] left-20 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2.5 }}
+            >
+              it is not
+            </motion.div>
+            <motion.div 
+              className="absolute top-[11.5rem] left-16 text-lg text-gray-300 font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2.7 }}
+            >
+              real?
+            </motion.div>
             </div>
 
             {/* Boy silhouette - right side */}
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/2">
+            <div className="absolute right-20 top-[-7rem] w-[300px]">
               <div className="relative w-96 h-96 mx-auto">
                 <SilhouetteSVG className="w-full h-full opacity-90" />
               </div>
