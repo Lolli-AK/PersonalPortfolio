@@ -235,10 +235,10 @@ export default function HeroSection() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <blockquote className="text-lg italic text-gray-200 font-serif">
-              "Insert inspirational quote here. This is where you would put a meaningful quote 
-              that represents your philosophy or approach to work and life."
+              "The half is a mere moment of inability but you are able for you are not half a being. 
+              You are a whole that exists to live a life not half a life."
             </blockquote>
-            <cite className="block text-right text-gray-400 mt-3">— Insert Author Name</cite>
+            <cite className="block text-right text-gray-400 mt-3">— Gibran Khalil Gibran</cite>
           </motion.div>
         </motion.div>
       </div>
