@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "Research Paper Summarizer",
-    description: "AI-powered tool that distills complex academic papers into digestible summaries, making research more accessible and efficient.",
+    description: "Insert project description here. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.",
     tech: ["Python", "NLP", "AI"],
     gradient: "from-cyan-500/10 to-blue-600/20",
     border: "border-cyan-400/20 hover:border-cyan-400/40",
@@ -11,7 +11,7 @@ const projects = [
   },
   {
     title: "Algorithm Visualizer",
-    description: "Interactive platform for visualizing sorting and searching algorithms, helping students understand complex computational processes.",
+    description: "Insert project description here. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
     tech: ["React", "D3.js", "Education"],
     gradient: "from-amber-500/10 to-orange-600/20",
     border: "border-amber-400/20 hover:border-amber-400/40",
@@ -19,7 +19,7 @@ const projects = [
   },
   {
     title: "LeetCode Gamifier",
-    description: "Transforms coding practice into an engaging game experience with achievements, streaks, and social features to motivate consistent learning.",
+    description: "Insert project description here. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
     tech: ["Node.js", "Gamification", "API"],
     gradient: "from-emerald-500/10 to-teal-600/20",
     border: "border-emerald-400/20 hover:border-emerald-400/40",
@@ -42,7 +42,7 @@ export default function ProjectsSection() {
             Featured Projects
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Exploring the intersection of technology, creativity, and problem-solving
+            Insert text here about projects and work
           </p>
         </motion.div>
 

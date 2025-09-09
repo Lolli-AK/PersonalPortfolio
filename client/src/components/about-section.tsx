@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const hobbies = [
-  { title: "Travel", description: "Exploring cultures and landscapes" },
-  { title: "Photography", description: "Capturing fleeting moments" },
-  { title: "Reading", description: "Philosophy and literature" },
-  { title: "Music", description: "Jazz and ambient soundscapes" }
+  { title: "Travel", description: "Insert text here" },
+  { title: "Photography", description: "Insert text here" },
+  { title: "Reading", description: "Insert text here" },
+  { title: "Music", description: "Insert text here" }
 ];
 
 export default function AboutSection() {
@@ -25,12 +25,12 @@ export default function AboutSection() {
             </h2>
             <div className="space-y-6 text-slate-300 leading-relaxed">
               <p className="text-xl">
-                I'm a passionate developer who believes in the magic of code and the power of imagination. 
-                My journey spans across various technologies, always seeking to blend functionality with beauty.
+                Insert text here. Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new places, capturing moments through photography, 
-                and diving deep into books that challenge perspectives and ignite creativity.
+                Insert text here. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris, 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
               </p>
             </div>
             

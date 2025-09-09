@@ -61,7 +61,7 @@ export default function ContactSection() {
             Let's Connect
           </h2>
           <p className="text-xl text-slate-300">
-            Excited to know more? Let's talk!
+            Insert contact description here
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ export default function ContactSection() {
                         <FormLabel className="text-sm font-semibold text-white">Name</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Your Name"
+                            placeholder="Insert name here"
                             className="bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                             {...field}
                           />
@@ -104,7 +104,7 @@ export default function ContactSection() {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="your.email@example.com"
+                            placeholder="insert.email@here.com"
                             className="bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                             {...field}
                           />
@@ -124,7 +124,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Textarea
                           rows={5}
-                          placeholder="Tell me about your project or just say hello!"
+                          placeholder="Insert message text here..."
                           className="bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                           {...field}
                         />

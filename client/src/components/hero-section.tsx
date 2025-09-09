@@ -224,8 +224,8 @@ export default function HeroSection() {
               <span className="text-cyan-400"> Developer</span>
             </h1>
             <p className="text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
-              Bringing ideas to life through code, design, and imagination. 
-              Welcome to my digital canvas.
+              Insert text here about what you do. 
+              Welcome to my digital space.
             </p>
           </div>
           
@@ -235,10 +235,10 @@ export default function HeroSection() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <blockquote className="text-lg italic text-gray-200 font-serif">
-              "The half is a mere moment of inability but you are able for you are not half a being. 
-              You are a whole that exists to live a life not half a life."
+              "Insert inspirational quote here. This is where you would put a meaningful quote 
+              that represents your philosophy or approach to work and life."
             </blockquote>
-            <cite className="block text-right text-gray-400 mt-3">— Gibran Khalil Gibran</cite>
+            <cite className="block text-right text-gray-400 mt-3">— Insert Author Name</cite>
           </motion.div>
         </motion.div>
       </div>
