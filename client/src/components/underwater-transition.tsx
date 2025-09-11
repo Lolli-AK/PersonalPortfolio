@@ -45,25 +45,193 @@ export default function UnderwaterTransition() {
             }}
           />
 
-          {/* Floating particles */}
-          {[...Array(6)].map((_, i) => (
+          {/* Literary themed floating elements */}
+          
+          {/* Alice in Wonderland elements */}
+          <motion.div
+            className="absolute text-2xl opacity-60"
+            aria-hidden="true"
+            style={{ left: '15%', top: '20%' }}
+            animate={{
+              y: [-30, -90, -30],
+              x: [-15, 15, -15],
+              rotate: [0, 360, 0],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            🐰
+          </motion.div>
+          
+          <motion.div
+            className="absolute text-xl opacity-50"
+            aria-hidden="true"
+            style={{ left: '80%', top: '30%' }}
+            animate={{
+              y: [-20, -60, -20],
+              x: [-10, 10, -10],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          >
+            🎩
+          </motion.div>
+          
+          <motion.div
+            className="absolute text-lg opacity-40"
+            aria-hidden="true"
+            style={{ left: '70%', top: '60%' }}
+            animate={{
+              y: [-25, -75, -25],
+              x: [0, 20, 0],
+            }}
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 4,
+            }}
+          >
+            🃏
+          </motion.div>
+          
+          {/* Black Beauty elements */}
+          <motion.div
+            className="absolute text-2xl opacity-50"
+            style={{ left: '25%', top: '50%' }}
+            animate={{
+              y: [-35, -85, -35],
+              x: [-20, 5, -20],
+            }}
+            transition={{
+              duration: 11,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+            aria-hidden="true"
+          >
+            🐎
+          </motion.div>
+          
+          <motion.div
+            className="absolute text-lg opacity-40"
+            style={{ left: '60%', top: '40%' }}
+            animate={{
+              y: [-15, -65, -15],
+              rotate: [-10, 10, -10],
+            }}
+            transition={{
+              duration: 13,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 3,
+            }}
+            aria-hidden="true"
+          >
+            🐴
+          </motion.div>
+          
+          {/* Secret Garden elements */}
+          <motion.div
+            className="absolute text-xl opacity-50"
+            aria-hidden="true"
+            style={{ left: '10%', top: '70%' }}
+            animate={{
+              y: [-40, -80, -40],
+              x: [0, -15, 0],
+              scale: [0.8, 1.2, 0.8],
+            }}
+            transition={{
+              duration: 16,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 5,
+            }}
+          >
+            🌹
+          </motion.div>
+          
+          <motion.div
+            className="absolute text-lg opacity-40"
+            aria-hidden="true"
+            style={{ left: '85%', top: '50%' }}
+            animate={{
+              y: [-30, -70, -30],
+              x: [-5, -25, -5],
+            }}
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 6,
+            }}
+          >
+            🗝️
+          </motion.div>
+          
+          <motion.div
+            className="absolute text-2xl opacity-60"
+            aria-hidden="true"
+            style={{ left: '40%', top: '15%' }}
+            animate={{
+              y: [-20, -90, -20],
+              rotate: [0, 180, 360],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 7,
+            }}
+          >
+            🌿
+          </motion.div>
+          
+          <motion.div
+            className="absolute text-lg opacity-40"
+            aria-hidden="true"
+            style={{ left: '50%', top: '80%' }}
+            animate={{
+              y: [-25, -55, -25],
+              x: [10, -10, 10],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 8,
+            }}
+          >
+            🦋
+          </motion.div>
+          
+          {/* Additional floating particles for depth */}
+          {[...Array(3)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full"
+              className="absolute w-1 h-1 bg-white/15 rounded-full"
               style={{
-                left: `${20 + i * 15}%`,
-                top: `${30 + i * 10}%`,
+                left: `${30 + i * 20}%`,
+                top: `${25 + i * 15}%`,
               }}
               animate={{
-                y: [-20, -80, -20],
-                x: [-10, 10, -10],
-                opacity: [0.2, 0.8, 0.2],
+                y: [-10, -40, -10],
+                opacity: [0.1, 0.4, 0.1],
               }}
               transition={{
-                duration: 8 + i * 2,
+                duration: 6 + i,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: i * 1.5,
+                delay: i * 2,
               }}
             />
           ))}
