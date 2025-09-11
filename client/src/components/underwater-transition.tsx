@@ -12,7 +12,7 @@ export default function UnderwaterTransition() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6]);
 
   return (
-    <section ref={ref} className="relative h-screen overflow-hidden">
+    <section ref={ref} className="relative h-[50vh] overflow-hidden">
       {/* Water overlay effect */}
       <div className="absolute inset-0 water-overlay">
         <motion.div
@@ -80,7 +80,7 @@ export default function UnderwaterTransition() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl lg:text-6xl font-serif font-light opacity-90">
-            Dive Deeper
+            Continue the tale
           </h2>
           <p className="text-xl opacity-70">
             Text about what they are diving into
