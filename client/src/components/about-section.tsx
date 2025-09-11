@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
 
 const hobbies = [
-  { title: "Travel", description: "Insert text here" },
-  { title: "Photography", description: "Insert text here" },
+  { title: "Insert Hobby", description: "Insert text here" },
+  { title: "Running", description: "Insert text here" },
   { title: "Reading", description: "Insert text here" },
-  { title: "Music", description: "Insert text here" }
+  { title: "Writing", description: "Insert text here" },
 ];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative py-24 bg-gradient-to-b from-slate-800 to-slate-700">
+    <section
+      id="about"
+      className="relative py-24 bg-gradient-to-b from-slate-800 to-slate-700"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* About content */}
-          <motion.div 
+          <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -25,15 +28,17 @@ export default function AboutSection() {
             </h2>
             <div className="space-y-6 text-slate-300 leading-relaxed">
               <p className="text-xl">
-                Insert text here. Lorem ipsum dolor sit amet consectetur adipiscing elit. 
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Insert text here. Lorem ipsum dolor sit amet consectetur
+                adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
               <p>
-                Insert text here. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris, 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+                Insert text here. Ut enim ad minim veniam quis nostrud
+                exercitation ullamco laboris, nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit.
               </p>
             </div>
-            
+
             {/* Hobbies grid */}
             <div className="grid grid-cols-2 gap-4">
               {hobbies.map((hobby, index) => (
@@ -42,14 +47,16 @@ export default function AboutSection() {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: index * 0.1 
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
                   }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <h4 className="font-semibold text-white mb-2">{hobby.title}</h4>
+                  <h4 className="font-semibold text-white mb-2">
+                    {hobby.title}
+                  </h4>
                   <p className="text-sm text-slate-300">{hobby.description}</p>
                 </motion.div>
               ))}
@@ -57,7 +64,7 @@ export default function AboutSection() {
           </motion.div>
 
           {/* Photo gallery */}
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -72,7 +79,7 @@ export default function AboutSection() {
             >
               🏔️
             </motion.div>
-            
+
             <div className="grid grid-cols-2 gap-4">
               {/* Urban photography */}
               <motion.div
@@ -82,7 +89,7 @@ export default function AboutSection() {
               >
                 🏙️
               </motion.div>
-              
+
               {/* Nature close-up */}
               <motion.div
                 className="w-full h-32 bg-gradient-to-br from-emerald-400/20 to-teal-600/20 rounded-xl flex items-center justify-center text-white/60 text-4xl"

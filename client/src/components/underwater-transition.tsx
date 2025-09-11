@@ -5,7 +5,7 @@ export default function UnderwaterTransition() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
@@ -22,10 +22,7 @@ export default function UnderwaterTransition() {
       </div>
 
       {/* Background underwater scene */}
-      <motion.div
-        className="absolute inset-0"
-        style={{ y }}
-      >
+      <motion.div className="absolute inset-0" style={{ y }}>
         <div className="w-full h-full bg-gradient-to-b from-cyan-200 via-cyan-600 to-slate-900 relative">
           {/* Animated water patterns */}
           <motion.div
@@ -36,7 +33,7 @@ export default function UnderwaterTransition() {
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: "linear"
+              ease: "linear",
             }}
             style={{
               backgroundImage: `
@@ -44,10 +41,10 @@ export default function UnderwaterTransition() {
                 radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(255,255,255,0.15) 0%, transparent 50%)
               `,
-              backgroundSize: "200px 200px, 300px 300px, 250px 250px"
+              backgroundSize: "200px 200px, 300px 300px, 250px 250px",
             }}
           />
-          
+
           {/* Floating particles */}
           {[...Array(6)].map((_, i) => (
             <motion.div
@@ -66,16 +63,16 @@ export default function UnderwaterTransition() {
                 duration: 8 + i * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: i * 1.5
+                delay: i * 1.5,
               }}
             />
           ))}
         </div>
       </motion.div>
-      
+
       {/* Centered content */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <motion.div 
+        <motion.div
           className="text-center text-white space-y-6"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +82,9 @@ export default function UnderwaterTransition() {
           <h2 className="text-4xl lg:text-6xl font-serif font-light opacity-90">
             Dive Deeper
           </h2>
-          <p className="text-xl opacity-70">Into my world of projects and passions</p>
+          <p className="text-xl opacity-70">
+            Text about what they are diving into
+          </p>
         </motion.div>
       </div>
     </section>

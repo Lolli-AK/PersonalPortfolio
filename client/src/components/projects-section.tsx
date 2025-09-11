@@ -3,35 +3,41 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "Research Paper Summarizer",
-    description: "Insert project description here. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.",
+    description:
+      "AI-powered tool that distills complex academic papers into digestible summaries, making research more accessible and efficient.",
     tech: ["Python", "NLP", "AI"],
     gradient: "from-cyan-500/10 to-blue-600/20",
     border: "border-cyan-400/20 hover:border-cyan-400/40",
-    tags: "bg-cyan-500/20 text-cyan-300"
+    tags: "bg-cyan-500/20 text-cyan-300",
   },
   {
-    title: "Algorithm Visualizer",
-    description: "Insert project description here. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+    title: "BadgerBurrows",
+    description:
+      "Website created to assuage the needs of students in a growing campus, bridging the gap between campus’s hidden study spots, and the emerging need for new places to study.",
     tech: ["React", "D3.js", "Education"],
     gradient: "from-amber-500/10 to-orange-600/20",
     border: "border-amber-400/20 hover:border-amber-400/40",
-    tags: "bg-amber-500/20 text-amber-300"
+    tags: "bg-amber-500/20 text-amber-300",
   },
   {
-    title: "LeetCode Gamifier",
-    description: "Insert project description here. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+    title: "Project",
+    description:
+      "Insert project description here. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
     tech: ["Node.js", "Gamification", "API"],
     gradient: "from-emerald-500/10 to-teal-600/20",
     border: "border-emerald-400/20 hover:border-emerald-400/40",
-    tags: "bg-emerald-500/20 text-emerald-300"
-  }
+    tags: "bg-emerald-500/20 text-emerald-300",
+  },
 ];
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="relative py-24 bg-gradient-to-b from-slate-900 to-slate-800">
+    <section
+      id="projects"
+      className="relative py-24 bg-gradient-to-b from-slate-900 to-slate-800"
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,14 +59,14 @@ export default function ProjectsSection() {
               className={`group relative bg-gradient-to-br ${project.gradient} backdrop-blur-sm rounded-3xl p-8 border ${project.border} transition-all duration-500 hover:scale-105`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.8, 
-                delay: index * 0.2 
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
               }}
               viewport={{ once: true }}
               whileHover={{
                 y: -10,
-                transition: { type: "spring", stiffness: 300 }
+                transition: { type: "spring", stiffness: 300 },
               }}
             >
               {/* Project icon/image placeholder */}
@@ -71,7 +77,7 @@ export default function ProjectsSection() {
                   {index === 2 && "🎮"}
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <h3 className="text-2xl font-serif font-semibold text-white">
                   {project.title}
@@ -81,7 +87,7 @@ export default function ProjectsSection() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
-                    <span 
+                    <span
                       key={tech}
                       className={`px-3 py-1 ${project.tags} rounded-full text-sm font-mono`}
                     >
@@ -102,7 +108,7 @@ export default function ProjectsSection() {
                   duration: 3,
                   repeat: Infinity,
                   ease: "easeInOut",
-                  delay: index * 0.5
+                  delay: index * 0.5,
                 }}
               />
             </motion.div>
