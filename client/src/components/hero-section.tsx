@@ -58,6 +58,22 @@ export default function HeroSection() {
         {/* Main content area with quote words and boy side by side */}
         <div className="flex justify-center items-center min-h-[400px] mb-8">
           <div className="relative w-full max-w-6xl">
+            {/* The Alcove title above everything */}
+            <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-4">
+              <motion.h1 
+                className="text-4xl lg:text-6xl font-serif font-bold text-emerald-400 text-center"
+                style={{ 
+                  textShadow: '0 0 30px rgba(16, 185, 129, 0.6)',
+                  fontFamily: 'Playfair Display, serif'
+                }}
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+              >
+                The Alcove
+              </motion.h1>
+            </div>
+
             {/* Floating quote words - left side */}
             <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/2">
               {/* Flowy geometric shapes */}
