@@ -33,7 +33,13 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm border-b border-slate-200/50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="font-serif font-semibold text-xl text-slate-800">Portfolio</div>
+            <a href="#hero" className="font-serif font-semibold text-xl hover:opacity-80 transition-opacity" data-testid="link-brand" aria-label="Go to top of page" style={{ 
+              color: '#10b981',
+              textShadow: '0 0 10px rgba(16, 185, 129, 0.3)',
+              fontFamily: 'Playfair Display, serif'
+            }}>
+              The Alcove
+            </a>
             <div className="hidden md:flex space-x-8">
               <a href="#hero" className="text-slate-600 hover:text-slate-900 transition-colors">Home</a>
               <a href="#projects" className="text-slate-600 hover:text-slate-900 transition-colors">Projects</a>
@@ -54,7 +60,7 @@ export default function Home() {
       <footer className="bg-slate-950 py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="font-serif font-semibold text-xl text-white">Portfolio</div>
+            <div className="font-serif font-semibold text-xl text-white">The Alcove</div>
             <div className="flex space-x-6">
               <a href="#" className="text-slate-400 hover:text-white transition-colors">GitHub</a>
               <a href="#" className="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
