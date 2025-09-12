@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const hobbies = [
-  { title: "Insert Hobby", description: "Insert text here" },
+  // { title: "Insert Hobby", description: "Insert text here" },
   { title: "Running", description: "Insert text here" },
   { title: "Reading", description: "Insert text here" },
   { title: "Writing", description: "Insert text here" },
@@ -28,14 +28,14 @@ export default function AboutSection() {
             </h2>
             <div className="space-y-6 text-slate-300 leading-relaxed">
               <p className="text-xl">
-                Insert text here. Lorem ipsum dolor sit amet consectetur
-                adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
+                I'm a recent CS undergraduate. I'm also someone who likes
+                meeting people, trying new things, thinking about how technology
+                lives in our world, for better and for worse, and quoting
+                people.
               </p>
               <p>
-                Insert text here. Ut enim ad minim veniam quis nostrud
-                exercitation ullamco laboris, nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit.
+                As Bill Gates once said, "Technology is unlocking the innate
+                compassion we have for our fellow human beings"
               </p>
             </div>
 

@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-[65vh] flex items-center justify-center overflow-hidden pt-24 md:pt-28 scroll-mt-28"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600"></div>
 
@@ -54,26 +54,26 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-        {/* Main content area with quote words and boy side by side */}
-        <div className="flex justify-center items-center min-h-[400px] mb-8">
-          <div className="relative w-full max-w-6xl">
-            {/* The Alcove title above everything */}
-            <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-4">
-              <motion.h1 
-                className="text-4xl lg:text-6xl font-serif font-bold text-emerald-400 text-center"
-                style={{ 
-                  textShadow: '0 0 30px rgba(16, 185, 129, 0.6)',
-                  fontFamily: 'Playfair Display, serif'
-                }}
-                initial={{ opacity: 0, y: -30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-              >
-                The Alcove
-              </motion.h1>
-            </div>
+      {/* The Alcove — pinned to top of the section */}
+      <div className="absolute z-20 left-1/2 top-24 md:top-20 -translate-x-1/2">
+        <motion.h1
+          className="text-4xl lg:text-6xl font-serif font-bold text-gray-300 text-center"
+          style={{
+            textShadow: "0 0 30px rgba(16, 185, 129, 0.6)",
+            fontFamily: "Playfair Display, serif",
+          }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          The Alcove
+        </motion.h1>
+      </div>
 
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-10">
+        {/* Main content area with quote words and boy side by side */}
+        <div className="flex justify-center items-start min-h-[240px] md:min-h-[300px] mb-4">
+          <div className="relative w-full max-w-6xl">
             {/* Floating quote words - left side */}
             <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/2">
               {/* Flowy geometric shapes */}
@@ -238,10 +238,10 @@ export default function HeroSection() {
         >
           <div className="space-y-4">
             <h1 className="text-3xl lg:text-4xl font-serif font-bold text-white leading-tight">
-              Creative Developer
+              Aamuktha's Personal Website :)
             </h1>
             <p className="text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
-              Insert text here about motivations of CS or rest of website.
+              Recent Graduate From UW-Madison | Aspiring Software Engineer | Aspiring Product Manager | Aspiring Writer
             </p>
           </div>
 

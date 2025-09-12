@@ -19,15 +19,15 @@ const projects = [
     border: "border-amber-400/20 hover:border-amber-400/40",
     tags: "bg-amber-500/20 text-amber-300",
   },
-  {
-    title: "Project",
-    description:
-      "Insert project description here. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
-    tech: ["Node.js", "Gamification", "API"],
-    gradient: "from-emerald-500/10 to-teal-600/20",
-    border: "border-emerald-400/20 hover:border-emerald-400/40",
-    tags: "bg-emerald-500/20 text-emerald-300",
-  },
+  // {
+  //   title: "Project",
+  //   description:
+  //     "Insert project description here. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+  //   tech: ["Node.js", "Gamification", "API"],
+  //   gradient: "from-emerald-500/10 to-teal-600/20",
+  //   border: "border-emerald-400/20 hover:border-emerald-400/40",
+  //   tags: "bg-emerald-500/20 text-emerald-300",
+  // },
 ];
 
 export default function ProjectsSection() {
