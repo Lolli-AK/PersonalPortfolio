@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
@@ -9,6 +10,7 @@ const projects = [
     gradient: "from-cyan-500/10 to-blue-600/20",
     border: "border-cyan-400/20 hover:border-cyan-400/40",
     tags: "bg-cyan-500/20 text-cyan-300",
+    githubUrl: "#", // Replace with your actual GitHub repo URL
   },
   {
     title: "BadgerBurrows",
@@ -18,6 +20,7 @@ const projects = [
     gradient: "from-amber-500/10 to-orange-600/20",
     border: "border-amber-400/20 hover:border-amber-400/40",
     tags: "bg-amber-500/20 text-amber-300",
+    githubUrl: "#", // Replace with your actual GitHub repo URL
   },
   // {
   //   title: "Project",
@@ -95,6 +98,23 @@ export default function ProjectsSection() {
                     </span>
                   ))}
                 </div>
+                
+                {/* GitHub link */}
+                {project.githubUrl && (
+                  <div className="pt-4">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors group"
+                      data-testid={`link-github-${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      <Github className="w-4 h-4" />
+                      <span className="text-sm">View on GitHub</span>
+                      <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </a>
+                  </div>
+                )}
               </div>
 
               {/* Floating animation */}
