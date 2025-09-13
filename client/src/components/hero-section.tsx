@@ -218,6 +218,16 @@ export default function HeroSection() {
               >
                 real?
               </motion.div>
+              
+              {/* Attribution */}
+              <motion.div
+                className="absolute top-[13rem] left-20 text-sm text-gray-400 font-light italic"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 3.0 }}
+              >
+                - Albus Dumbledore
+              </motion.div>
             </div>
 
             {/* Boy silhouette - right side */}
