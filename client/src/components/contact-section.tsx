@@ -61,7 +61,7 @@ export default function ContactSection() {
             Let's Connect
           </h2>
           <p className="text-xl text-slate-300">
-            Insert contact description here
+            I'd love to hear from you! Whether you have a project in mind or just want to connect.
           </p>
         </motion.div>
 
@@ -85,7 +85,8 @@ export default function ContactSection() {
                         <FormLabel className="text-sm font-semibold text-white">Name</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Insert name here"
+                            placeholder="Your name"
+                            data-testid="input-name"
                             className="bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                             {...field}
                           />
@@ -104,7 +105,8 @@ export default function ContactSection() {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="insert.email@here.com"
+                            placeholder="your.email@example.com"
+                            data-testid="input-email"
                             className="bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                             {...field}
                           />
@@ -124,7 +126,8 @@ export default function ContactSection() {
                       <FormControl>
                         <Textarea
                           rows={5}
-                          placeholder="Insert message text here..."
+                          placeholder="Tell me about your project or just say hello!"
+                          data-testid="input-message"
                           className="bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                           {...field}
                         />
@@ -139,6 +142,7 @@ export default function ContactSection() {
                     type="submit"
                     disabled={contactMutation.isPending}
                     className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+                    data-testid="button-submit"
                   >
                     {contactMutation.isPending ? "Sending..." : "Send Message"}
                   </Button>

@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactMessageSchema } from "@shared/schema";
 import { z } from "zod";
+import { sendEmail, createContactNotificationEmail } from "./sendgrid";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission
@@ -11,10 +12,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertContactMessageSchema.parse(req.body);
       const message = await storage.createContactMessage(validatedData);
       
-      // In a real application, you would send an email here
-      // For now, we'll just store the message
-      console.log("New contact message:", message);
+      // Send email notification
+      const emailTemplate = createContactNotificationEmail(validatedData);
+      const emailResult = await sendEmail({
+        to: "aamuktha1k@gmail.com",
+        from: "contact@portfolio.com", // This will be configured properly with SendGrid
+        ...emailTemplate,
+      });
       
+      if (emailResult.success) {
+        console.log("Email notification sent successfully");
+      } else {
+        console.log("Email notification failed:", emailResult.error);
+      }
+      
+      // Always return success if message was saved, even if email failed
       res.json({ success: true, message: "Message sent successfully!" });
     } catch (error) {
       if (error instanceof z.ZodError) {
