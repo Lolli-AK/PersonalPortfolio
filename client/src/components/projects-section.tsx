@@ -10,7 +10,7 @@ const projects = [
     gradient: "from-cyan-500/10 to-blue-600/20",
     border: "border-cyan-400/20 hover:border-cyan-400/40",
     tags: "bg-cyan-500/20 text-cyan-300",
-    githubUrl: "#", // Replace with your actual GitHub repo URL
+    githubUrl: "https://github.com/Lolli-AK/ResearchPaperSummarizer",
   },
   {
     title: "BadgerBurrows",
@@ -20,7 +20,7 @@ const projects = [
     gradient: "from-amber-500/10 to-orange-600/20",
     border: "border-amber-400/20 hover:border-amber-400/40",
     tags: "bg-amber-500/20 text-amber-300",
-    githubUrl: "#", // Replace with your actual GitHub repo URL
+    githubUrl: "https://github.com/Lolli-AK/studyspots",
   },
   // {
   //   title: "Project",
