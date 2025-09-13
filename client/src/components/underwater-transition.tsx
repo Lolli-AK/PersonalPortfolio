@@ -46,12 +46,12 @@ export default function UnderwaterTransition() {
           />
 
           {/* Literary themed floating elements */}
-          
+
           {/* Alice in Wonderland elements */}
           <motion.div
             className="absolute text-2xl opacity-60"
             aria-hidden="true"
-            style={{ left: '15%', top: '20%' }}
+            style={{ left: "15%", top: "20%" }}
             animate={{
               y: [-30, -90, -30],
               x: [-15, 15, -15],
@@ -65,11 +65,11 @@ export default function UnderwaterTransition() {
           >
             🐰
           </motion.div>
-          
+
           <motion.div
             className="absolute text-xl opacity-50"
             aria-hidden="true"
-            style={{ left: '80%', top: '30%' }}
+            style={{ left: "80%", top: "30%" }}
             animate={{
               y: [-20, -60, -20],
               x: [-10, 10, -10],
@@ -84,11 +84,11 @@ export default function UnderwaterTransition() {
           >
             🎩
           </motion.div>
-          
+
           <motion.div
             className="absolute text-lg opacity-40"
             aria-hidden="true"
-            style={{ left: '70%', top: '60%' }}
+            style={{ left: "70%", top: "60%" }}
             animate={{
               y: [-25, -75, -25],
               x: [0, 20, 0],
@@ -102,11 +102,11 @@ export default function UnderwaterTransition() {
           >
             🃏
           </motion.div>
-          
+
           {/* Black Beauty elements */}
           <motion.div
             className="absolute text-2xl opacity-50"
-            style={{ left: '25%', top: '50%' }}
+            style={{ left: "25%", top: "50%" }}
             animate={{
               y: [-35, -85, -35],
               x: [-20, 5, -20],
@@ -121,10 +121,10 @@ export default function UnderwaterTransition() {
           >
             🐎
           </motion.div>
-          
+
           <motion.div
             className="absolute text-lg opacity-40"
-            style={{ left: '60%', top: '40%' }}
+            style={{ left: "60%", top: "40%" }}
             animate={{
               y: [-15, -65, -15],
               rotate: [-10, 10, -10],
@@ -139,12 +139,12 @@ export default function UnderwaterTransition() {
           >
             🐴
           </motion.div>
-          
+
           {/* Secret Garden elements */}
           <motion.div
             className="absolute text-xl opacity-50"
             aria-hidden="true"
-            style={{ left: '10%', top: '70%' }}
+            style={{ left: "10%", top: "70%" }}
             animate={{
               y: [-40, -80, -40],
               x: [0, -15, 0],
@@ -159,11 +159,11 @@ export default function UnderwaterTransition() {
           >
             🌹
           </motion.div>
-          
+
           <motion.div
             className="absolute text-lg opacity-40"
             aria-hidden="true"
-            style={{ left: '85%', top: '50%' }}
+            style={{ left: "85%", top: "50%" }}
             animate={{
               y: [-30, -70, -30],
               x: [-5, -25, -5],
@@ -177,11 +177,11 @@ export default function UnderwaterTransition() {
           >
             🗝️
           </motion.div>
-          
+
           <motion.div
             className="absolute text-2xl opacity-60"
             aria-hidden="true"
-            style={{ left: '40%', top: '15%' }}
+            style={{ left: "40%", top: "15%" }}
             animate={{
               y: [-20, -90, -20],
               rotate: [0, 180, 360],
@@ -195,11 +195,11 @@ export default function UnderwaterTransition() {
           >
             🌿
           </motion.div>
-          
+
           <motion.div
             className="absolute text-lg opacity-40"
             aria-hidden="true"
-            style={{ left: '50%', top: '80%' }}
+            style={{ left: "50%", top: "80%" }}
             animate={{
               y: [-25, -55, -25],
               x: [10, -10, 10],
@@ -213,7 +213,7 @@ export default function UnderwaterTransition() {
           >
             🦋
           </motion.div>
-          
+
           {/* Additional floating particles for depth */}
           {[...Array(3)].map((_, i) => (
             <motion.div
@@ -251,7 +251,9 @@ export default function UnderwaterTransition() {
             Continue the tale
           </h2>
           <p className="text-xl opacity-70">
-            Text about what they are diving into
+            I am sure there is Magic in everything, only we have not sense
+            enough to get hold of it and make it do things for us.
+            <span className="block mt-2">- Mary Lennox</span>
           </p>
         </motion.div>
       </div>

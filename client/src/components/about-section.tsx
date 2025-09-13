@@ -1,11 +1,67 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+
+// Import your photos
+import photo1 from "@assets/70477915848__DC15A1A6-60E9-42F6-957F-FD9541AACE06_1757724820701.jpeg";
+import photo2 from "@assets/IMG_4889_1757724823056.jpeg";
+import photo3 from "@assets/1C95CE14-F161-4B9C-ACBD-7341902FA7EC_1757724826468.jpeg";
+import photo4 from "@assets/F1814244-FE48-414D-8E03-E9080E8C97D6_1757724828952.jpeg";
 
 const hobbies = [
-  // { title: "Insert Hobby", description: "Insert text here" },
-  { title: "Running", description: "Insert text here" },
-  { title: "Reading", description: "Insert text here" },
-  { title: "Writing", description: "Insert text here" },
+  { title: "Running", description: "Exploring trails and staying active" },
+  { title: "Reading", description: "Diving into literature and learning" },
+  { title: "Writing", description: "Expressing thoughts and creativity" },
 ];
+
+const photos = [
+  { src: photo1, alt: "Personal photo 1" },
+  { src: photo2, alt: "Personal photo 2" },
+  { src: photo3, alt: "Personal photo 3" },
+  { src: photo4, alt: "Personal photo 4" },
+];
+
+function PhotoSlideshow() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % photos.length);
+    }, 4000); // Change photo every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-2xl">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={currentIndex}
+          src={photos[currentIndex].src}
+          alt={photos[currentIndex].alt}
+          className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        />
+      </AnimatePresence>
+      
+      {/* Photo indicators */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {photos.map((_, index) => (
+          <div
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex
+                ? "bg-white scale-125"
+                : "bg-white/50 hover:bg-white/75"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function AboutSection() {
   return (
@@ -63,7 +119,7 @@ export default function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Photo gallery */}
+          {/* Photo slideshow */}
           <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 50 }}
@@ -71,34 +127,26 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {/* Main travel photo */}
+            {/* Main photo slideshow */}
             <motion.div
-              className="w-full h-64 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 rounded-2xl shadow-2xl flex items-center justify-center text-white/60 text-6xl"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              🏔️
+              <PhotoSlideshow />
             </motion.div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {/* Urban photography */}
-              <motion.div
-                className="w-full h-32 bg-gradient-to-br from-amber-400/20 to-orange-600/20 rounded-xl flex items-center justify-center text-white/60 text-4xl"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                🏙️
-              </motion.div>
-
-              {/* Nature close-up */}
-              <motion.div
-                className="w-full h-32 bg-gradient-to-br from-emerald-400/20 to-teal-600/20 rounded-xl flex items-center justify-center text-white/60 text-4xl"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                🌿
-              </motion.div>
-            </div>
+            {/* Photo description */}
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-slate-300 text-sm italic">
+                Some moments from my journey
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

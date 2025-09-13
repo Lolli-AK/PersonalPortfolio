@@ -48,10 +48,10 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6">
-            Featured Projects
+            Projects
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Insert text here about projects and work
+            Currently working on:
           </p>
         </motion.div>
 
@@ -98,7 +98,7 @@ export default function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-                
+
                 {/* GitHub link */}
                 {project.githubUrl && (
                   <div className="pt-4">
@@ -107,7 +107,7 @@ export default function ProjectsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors group"
-                      data-testid={`link-github-${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      data-testid={`link-github-${project.title.toLowerCase().replace(/\s+/g, "-")}`}
                     >
                       <Github className="w-4 h-4" />
                       <span className="text-sm">View on GitHub</span>
