@@ -45,7 +45,7 @@ function PhotoSlideshow() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
         />
       </AnimatePresence>
-      
+
       {/* Photo indicators */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {photos.map((_, index) => (
@@ -86,8 +86,7 @@ export default function AboutSection() {
               <p className="text-xl">
                 I'm a recent CS undergraduate. I'm also someone who likes
                 meeting people, trying new things, thinking about how technology
-                lives in our world, for better and for worse, and quoting
-                people.
+                lives in our world, and quoting people.
               </p>
               <p>
                 As Bill Gates once said, "Technology is unlocking the innate
@@ -144,7 +143,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
             >
               <p className="text-slate-300 text-sm italic">
-                Some moments from my journey
+                The carousel is a work in progress...
               </p>
             </motion.div>
           </motion.div>

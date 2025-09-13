@@ -218,7 +218,7 @@ export default function HeroSection() {
               >
                 real?
               </motion.div>
-              
+
               {/* Attribution */}
               <motion.div
                 className="absolute top-[13rem] left-20 text-sm text-gray-400 font-light italic"
@@ -251,7 +251,8 @@ export default function HeroSection() {
               Aamuktha's Personal Website :)
             </h1>
             <p className="text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
-              Recent Graduate From UW-Madison | Aspiring Software Engineer | Aspiring Product Manager | Aspiring Writer
+              Recent CS Undergraduate From UW-Madison | Aspiring Software
+              Engineer | Aspiring Product Manager | Avid Reader
             </p>
           </div>
 
