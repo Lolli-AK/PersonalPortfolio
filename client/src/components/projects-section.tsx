@@ -6,7 +6,7 @@ const projects = [
     title: "Research Paper Summarizer",
     description:
       "AI-powered tool that distills complex academic papers into digestible summaries, making research more accessible and efficient.",
-    tech: ["Python", "NLP", "AI"],
+    tech: ["React", "TypeScript", "Node.js", "OpenAI API"],
     gradient: "from-cyan-500/10 to-blue-600/20",
     border: "border-cyan-400/20 hover:border-cyan-400/40",
     tags: "bg-cyan-500/20 text-cyan-300",
@@ -16,7 +16,7 @@ const projects = [
     title: "BadgerBurrows",
     description:
       "Website created to assuage the needs of students in a growing campus, bridging the gap between campus’s hidden study spots, and the emerging need for new places to study.",
-    tech: ["React", "D3.js", "Education"],
+    tech: ["React", "Flask", "Google Maps", "SQLite"],
     gradient: "from-amber-500/10 to-orange-600/20",
     border: "border-amber-400/20 hover:border-amber-400/40",
     tags: "bg-amber-500/20 text-amber-300",
