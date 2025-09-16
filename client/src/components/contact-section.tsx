@@ -145,7 +145,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Textarea
                           rows={5}
-                          placeholder="Tell me about your project or just say hello!"
+                          placeholder="Thank you for reaching out."
                           data-testid="input-message"
                           className="bg-slate-800 border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                           {...field}
