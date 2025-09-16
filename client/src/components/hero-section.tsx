@@ -221,7 +221,7 @@ export default function HeroSection() {
 
               {/* Attribution */}
               <motion.div
-                className="absolute top-[13rem] left-20 text-sm text-gray-400 font-light italic"
+                className="absolute top-[13rem] left-20 text-sm text-gray-300 font-light italic"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 3.0 }}
@@ -273,15 +273,140 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Quill pen scroll indicator - bottom right corner */}
       <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-8 right-8 z-30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3.5, duration: 1 }}
       >
-        <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-300 rounded-full mt-2"></div>
-        </div>
+        {/* Quill pen container with subtle glow */}
+        <motion.div
+          className="relative"
+          animate={{ 
+            y: [0, -8, 0],
+            rotate: [0, 2, 0, -2, 0]
+          }}
+          transition={{ 
+            duration: 4, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+          style={{
+            filter: "drop-shadow(0 0 12px rgba(16, 185, 129, 0.4))",
+          }}
+        >
+          {/* Quill pen body */}
+          <div className="relative w-8 h-16">
+            {/* Feather part */}
+            <div 
+              className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-10 bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 rounded-t-full"
+              style={{
+                clipPath: "polygon(50% 0%, 20% 30%, 30% 80%, 50% 100%, 70% 80%, 80% 30%)"
+              }}
+            />
+            
+            {/* Feather details/texture lines */}
+            <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-4 h-6">
+              <div className="absolute top-1 left-1/2 w-px h-3 bg-gray-500/60 transform -translate-x-1/2 rotate-12"></div>
+              <div className="absolute top-2 left-1/2 w-px h-2 bg-gray-500/60 transform -translate-x-1/2 -rotate-12"></div>
+              <div className="absolute top-3 left-1/2 w-px h-2 bg-gray-500/60 transform -translate-x-1/2 rotate-12"></div>
+            </div>
+            
+            {/* Quill tip/nib */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-6 bg-gradient-to-b from-gray-600 to-gray-800 rounded-b-full"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0.5 h-2 bg-gray-900 rounded-b-full"></div>
+          </div>
+          
+          {/* Animated ink drops */}
+          <motion.div
+            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2"
+            animate={{ opacity: [0, 1, 1, 0] }}
+            transition={{ 
+              duration: 2.5, 
+              repeat: Infinity, 
+              ease: "easeOut",
+              times: [0, 0.1, 0.7, 1]
+            }}
+          >
+            <motion.div
+              className="w-1 h-1 bg-gray-600 rounded-full"
+              animate={{ 
+                y: [0, 40], 
+                scale: [1, 0.8, 0.6] 
+              }}
+              transition={{ 
+                duration: 2.5, 
+                repeat: Infinity, 
+                ease: "easeIn" 
+              }}
+            />
+          </motion.div>
+          
+          <motion.div
+            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2"
+            animate={{ opacity: [0, 1, 1, 0] }}
+            transition={{ 
+              duration: 2.5, 
+              repeat: Infinity, 
+              ease: "easeOut",
+              delay: 0.8,
+              times: [0, 0.1, 0.7, 1]
+            }}
+          >
+            <motion.div
+              className="w-0.5 h-0.5 bg-gray-700 rounded-full"
+              animate={{ 
+                y: [0, 35], 
+                x: [-2, 1],
+                scale: [1, 0.7, 0.4] 
+              }}
+              transition={{ 
+                duration: 2.5, 
+                repeat: Infinity, 
+                ease: "easeIn",
+                delay: 0.8 
+              }}
+            />
+          </motion.div>
+          
+          <motion.div
+            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2"
+            animate={{ opacity: [0, 1, 1, 0] }}
+            transition={{ 
+              duration: 2.5, 
+              repeat: Infinity, 
+              ease: "easeOut",
+              delay: 1.6,
+              times: [0, 0.1, 0.7, 1]
+            }}
+          >
+            <motion.div
+              className="w-0.5 h-0.5 bg-gray-600 rounded-full"
+              animate={{ 
+                y: [0, 42], 
+                x: [2, -1],
+                scale: [1, 0.8, 0.3] 
+              }}
+              transition={{ 
+                duration: 2.5, 
+                repeat: Infinity, 
+                ease: "easeIn",
+                delay: 1.6 
+              }}
+            />
+          </motion.div>
+        </motion.div>
+        
+        {/* Subtle hint text */}
+        <motion.div
+          className="absolute -left-16 top-1/2 transform -translate-y-1/2 text-xs text-gray-400 font-light opacity-0 hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 0.6, x: 0 }}
+          transition={{ delay: 5, duration: 0.8 }}
+        >
+          scroll down
+        </motion.div>
       </motion.div>
     </section>
   );

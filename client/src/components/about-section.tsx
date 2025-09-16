@@ -8,9 +8,9 @@ import photo3 from "@assets/1C95CE14-F161-4B9C-ACBD-7341902FA7EC_1757724826468.j
 import photo4 from "@assets/F1814244-FE48-414D-8E03-E9080E8C97D6_1757724828952.jpeg";
 
 const hobbies = [
-  { title: "Running", description: "Exploring trails and staying active" },
-  { title: "Reading", description: "Diving into literature and learning" },
-  { title: "Writing", description: "Expressing thoughts and creativity" },
+  { title: "Running", description: "" },
+  { title: "Reading", description: "" },
+  { title: "Writing", description: "" },
 ];
 
 const photos = [

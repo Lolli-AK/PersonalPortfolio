@@ -50,9 +50,7 @@ export default function ProjectsSection() {
           <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6">
             Projects
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Currently working on:
-          </p>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto"></p>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
