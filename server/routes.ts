@@ -16,7 +16,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const emailTemplate = createContactNotificationEmail(validatedData);
       const emailResult = await sendEmail({
         to: "aamuktha1k@gmail.com",
-        from: "contact@portfolio.com", // This will be configured properly with SendGrid
+        from: "aamuktha1k@gmail.com", // Using your verified email as sender
         ...emailTemplate,
       });
       
