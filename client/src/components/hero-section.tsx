@@ -318,22 +318,26 @@ export default function HeroSection() {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0.5 h-2 bg-gray-900 rounded-b-full"></div>
           </div>
           
-          {/* Animated ink drops */}
+          {/* Animated ink drops - Made more prominent */}
           <motion.div
             className="absolute -bottom-2 left-1/2 transform -translate-x-1/2"
-            animate={{ opacity: [0, 1, 1, 0] }}
+            animate={{ opacity: [0, 1, 0.9, 0] }}
             transition={{ 
               duration: 2.5, 
               repeat: Infinity, 
               ease: "easeOut",
-              times: [0, 0.1, 0.7, 1]
+              times: [0, 0.2, 0.8, 1]
             }}
           >
             <motion.div
-              className="w-1 h-1 bg-gray-600 rounded-full"
+              className="w-2 h-2 bg-gray-900 rounded-full shadow-lg"
+              style={{
+                background: "radial-gradient(circle, #1f2937 0%, #111827 100%)",
+                boxShadow: "0 0 6px rgba(0, 0, 0, 0.8)"
+              }}
               animate={{ 
-                y: [0, 40], 
-                scale: [1, 0.8, 0.6] 
+                y: [0, 50], 
+                scale: [1.2, 0.8, 0.4] 
               }}
               transition={{ 
                 duration: 2.5, 
@@ -345,21 +349,25 @@ export default function HeroSection() {
           
           <motion.div
             className="absolute -bottom-2 left-1/2 transform -translate-x-1/2"
-            animate={{ opacity: [0, 1, 1, 0] }}
+            animate={{ opacity: [0, 1, 0.8, 0] }}
             transition={{ 
               duration: 2.5, 
               repeat: Infinity, 
               ease: "easeOut",
               delay: 0.8,
-              times: [0, 0.1, 0.7, 1]
+              times: [0, 0.2, 0.8, 1]
             }}
           >
             <motion.div
-              className="w-0.5 h-0.5 bg-gray-700 rounded-full"
+              className="w-1.5 h-1.5 bg-gray-800 rounded-full shadow-md"
+              style={{
+                background: "radial-gradient(circle, #374151 0%, #1f2937 100%)",
+                boxShadow: "0 0 4px rgba(0, 0, 0, 0.6)"
+              }}
               animate={{ 
-                y: [0, 35], 
-                x: [-2, 1],
-                scale: [1, 0.7, 0.4] 
+                y: [0, 45], 
+                x: [-3, 2],
+                scale: [1.1, 0.7, 0.3] 
               }}
               transition={{ 
                 duration: 2.5, 
@@ -372,21 +380,25 @@ export default function HeroSection() {
           
           <motion.div
             className="absolute -bottom-2 left-1/2 transform -translate-x-1/2"
-            animate={{ opacity: [0, 1, 1, 0] }}
+            animate={{ opacity: [0, 1, 0.7, 0] }}
             transition={{ 
               duration: 2.5, 
               repeat: Infinity, 
               ease: "easeOut",
               delay: 1.6,
-              times: [0, 0.1, 0.7, 1]
+              times: [0, 0.2, 0.8, 1]
             }}
           >
             <motion.div
-              className="w-0.5 h-0.5 bg-gray-600 rounded-full"
+              className="w-1 h-1 bg-gray-700 rounded-full shadow-sm"
+              style={{
+                background: "radial-gradient(circle, #4b5563 0%, #374151 100%)",
+                boxShadow: "0 0 3px rgba(0, 0, 0, 0.5)"
+              }}
               animate={{ 
-                y: [0, 42], 
-                x: [2, -1],
-                scale: [1, 0.8, 0.3] 
+                y: [0, 48], 
+                x: [3, -2],
+                scale: [1, 0.8, 0.2] 
               }}
               transition={{ 
                 duration: 2.5, 
