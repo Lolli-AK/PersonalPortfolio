@@ -62,9 +62,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="font-serif font-semibold text-xl text-white">The Alcove</div>
             <div className="flex space-x-6">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">GitHub</a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">Twitter</a>
+              <a href="https://github.com/Lolli-AK" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" data-testid="link-github" aria-label="Visit GitHub profile">GitHub</a>
+              <a href="https://www.linkedin.com/in/aamuktha-kottapalli/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" data-testid="link-linkedin" aria-label="Visit LinkedIn profile">LinkedIn</a>
+              <a href="mailto:aamuktha1k@gmail.com" className="text-slate-400 hover:text-white transition-colors" data-testid="link-email" aria-label="Send email">Email</a>
             </div>
             <div className="text-slate-400 text-sm">
               © 2024 All rights reserved
