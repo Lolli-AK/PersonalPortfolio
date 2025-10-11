@@ -75,12 +75,12 @@ export default function HeroSection() {
         <div className="md:hidden flex flex-col items-center gap-8 mb-4">
           {/* Title and description */}
           <motion.div
-            className="text-center space-y-4 w-full"
+            className="text-center space-y-4 w-full mt-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <h1 className="text-3xl font-serif font-bold text-white leading-tight">
+            <h1 className="text-2xl font-serif font-bold text-white leading-tight">
               Aamuktha's Personal Website :)
             </h1>
             <p className="text-lg text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
