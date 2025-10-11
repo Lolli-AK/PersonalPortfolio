@@ -12,7 +12,7 @@ export default function UnderwaterTransition() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6]);
 
   return (
-    <section ref={ref} className="relative h-[35vh] overflow-hidden">
+    <section ref={ref} className="relative h-[50vh] overflow-hidden">
       {/* Water overlay effect */}
       <div className="absolute inset-0 water-overlay">
         <motion.div

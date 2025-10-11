@@ -70,7 +70,7 @@ export default function HeroSection() {
         </motion.h1>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 mt-16 md:mt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-10">
         {/* Main content area - responsive flex layout */}
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-8 md:gap-4 min-h-[240px] md:min-h-[300px] mb-4">
           
@@ -81,7 +81,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <h1 className="text-2xl font-serif font-bold text-white leading-tight">
+            <h1 className="text-3xl font-serif font-bold text-white leading-tight">
               Aamuktha's Personal Website :)
             </h1>
             <p className="text-lg text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
@@ -249,7 +249,7 @@ export default function HeroSection() {
           </div>
 
           {/* Boy silhouette - order-2 on mobile (after title), right side on desktop */}
-          <div className="order-2 md:order-none w-56 h-56 md:w-[400px] md:h-[400px] md:mt-[-7rem]">
+          <div className="order-2 md:order-none w-48 h-48 md:w-[300px] md:h-[300px] md:mt-[-7rem]">
             <SilhouetteSVG className="w-full h-full opacity-90" />
           </div>
         </div>
