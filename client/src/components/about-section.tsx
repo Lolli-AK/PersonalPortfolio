@@ -84,9 +84,11 @@ export default function AboutSection() {
             </h2>
             <div className="space-y-6 text-slate-300 leading-relaxed">
               <p className="text-xl">
-                I'm a recent CS undergraduate. I'm also someone who likes
-                meeting people, trying new things, thinking about how technology
-                lives in our world, and quoting people.
+                I'm a recent CS undergraduate. I like
+                meeting people, trying new things, and quotes.
+                I think about how technology lives in
+                our world, and how it can be used to increase
+                access.
               </p>
               <p>
                 As Bill Gates once said, "Technology is unlocking the innate
