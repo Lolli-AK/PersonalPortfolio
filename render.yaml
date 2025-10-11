@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: the-alcove-portfolio
+    runtime: node
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromGroup: web
+      - key: SENDGRID_API_KEY
+        sync: false
+    autoDeploy: true
