@@ -1,7 +1,7 @@
 # Product Requirements Document - The Alcove Portfolio
 
 ## Project Overview
-The Alcove is a modern personal portfolio website featuring advanced animations, interactive design elements, and a fully functional contact system. The site showcases projects, personal information, and provides visitor engagement through a contact form with database storage and email notifications.
+The Alcove is a modern personal portfolio website featuring animations, interactive design elements, and a contact system. The site showcases projects, personal information, and a contact form with database storage and email notifications.
 
 ## Technology Stack
 - **Frontend**: React 18 + TypeScript + Vite
@@ -89,7 +89,7 @@ The Alcove is a modern personal portfolio website featuring advanced animations,
 - **Contains**: 
   - Navigation bar with smooth scrolling
   - Hero section integration
-  - Underwater transition animation
+  - Blue charms transition animation
   - Projects section
   - About section
   - Contact section
@@ -405,10 +405,7 @@ npm run dev
 ---
 
 ## Future Enhancements
+- Contact form functionality
 - Database migration from in-memory to PostgreSQL
-- User authentication for admin dashboard
 - Project filtering and search
-- Dark mode toggle
 - Blog section integration
-- Analytics integration
-- Performance optimization
